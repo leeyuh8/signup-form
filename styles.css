@@ -5,6 +5,11 @@
   /* outline: 1px solid red; */
 }
 
+@font-face {
+  font-family: "LuckiestGuy";
+  src: url("./assets/fonts/LuckiestGuy-Regular.ttf");
+}
+
 body {
   display: flex;
 }
@@ -24,7 +29,7 @@ body {
 .img-content {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   position: absolute;
   bottom: 4rem;
   background-color: rgba(0,0,0,0.5);
@@ -39,8 +44,11 @@ body {
   
   h1 {
   color: #edd55a;
-  font-size: 5rem;
+  font-size: 4rem;
   text-wrap: nowrap;
+  font-family: 'LuckiestGuy';
+  margin-top: 20px;
+  letter-spacing: 5px;;
   }
 }
 
