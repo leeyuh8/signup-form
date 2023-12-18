@@ -62,7 +62,8 @@ body {
   }
 }
 
-.photo-credit {
+.photo-credit,
+footer {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -92,6 +93,7 @@ body {
   width: 60vw;
   background-color:var(--teal);
   gap: 50px;
+  position: relative;
 
   > h3 {
     font-size: 20px;
