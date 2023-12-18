@@ -11,7 +11,7 @@
 }
 :root {
   --rose: rgba(170, 160, 159, 1);
-  --licorice: rgba(35, 26, 21, 1);
+  --licorice: 35, 26, 21;
   --teal: rgba(105, 177, 166, 1);
   --pale-orange: rgba(225, 164, 97, 1);
   --chestnut: rgba(151, 74, 67, 1);
@@ -94,11 +94,12 @@ footer {
   background-color:var(--teal);
   gap: 50px;
   position: relative;
+  box-shadow: -10px 0 20px rgba(var(--licorice), 0.3);
 
   > h3 {
     font-size: 20px;
     padding: 0 30px;
-    color: var(--licorice)
+    color: rgba(var(--licorice), 1);
   }
 }
 
@@ -118,7 +119,7 @@ footer {
     border-radius: 10px;
     color: lightgray;
     border: none;
-    box-shadow: 3px 3px 10px var(--licorice);
+    box-shadow: 3px 3px 10px rgba(var(--licorice), 1);
   }
 
   > :nth-last-child(-n+2) {
@@ -144,7 +145,7 @@ footer {
   gap: 20px;
 
   h3 {
-    color: var(--licorice);
+    color: rgba(var(--licorice), 1);
   }
 }
 
@@ -159,7 +160,7 @@ footer {
   gap: 2px;
 
   label {
-    color: var(--licorice);
+    color: rgba(var(--licorice), 1);
     font-weight: bold;
     font-size: 10px;
     letter-spacing: 2px; 
