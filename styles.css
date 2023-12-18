@@ -9,12 +9,22 @@
   font-family: "LuckiestGuy";
   src: url("./assets/fonts/LuckiestGuy-Regular.ttf");
 }
+:root {
+  --rose: rgba(170, 160, 159, 1);
+  --licorice: rgba(35, 26, 21, 1);
+  --teal: rgba(105, 177, 166, 1);
+  --pale-orange: rgba(225, 164, 97, 1);
+  --chestnut: rgba(151, 74, 67, 1);
+  --maroon: rgba(58, 15, 6, 1);
+  --dark-teal: rgba(44, 96, 94, 1)
+}
 
 body {
   display: flex;
+  font-family: sans-serif;
 }
 
-.img-container {
+.left-container {
   background-image: url("./assets/images/background-by-quinton-coetzee-unsplash.jpg");
   background-size: cover;
   background-position: center;
@@ -73,3 +83,92 @@ body {
   }
 }
 
+.right-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  background-color:var(--teal);
+  gap: 50px;
+
+  > h3 {
+    font-size: 20px;
+    padding: 0 30px;
+    color: var(--licorice)
+  }
+}
+
+.form-container {
+  align-self: flex-start;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  button {
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--maroon);
+    border-radius: 10px;
+    color: lightgray;
+    border: none;
+    box-shadow: 3px 3px 10px var(--licorice);
+  }
+
+  > :nth-last-child(-n+2) {
+    margin-left: 30px;
+  }
+
+  p {
+    font-size: 14px;
+
+    a {
+      color: var(--dark-teal);
+      font-weight: bold;
+    }
+  }
+}
+
+.form-inputs {
+  background-color: var(--pale-orange);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.099);
+  gap: 20px;
+
+  h3 {
+    color: var(--licorice);
+  }
+}
+
+.form-row {
+  display: flex;
+  gap: 3rem;
+}
+
+.single-input {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  label {
+    color: var(--licorice);
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 2px; 
+  } 
+
+  input {
+    border: 2px solid var(--rose);
+    width: 200px;
+    border-radius: 5px;
+    height: 2em;
+    background-color: whitesmoke;
+    padding: 5px;
+  }
+  }

@@ -7,7 +7,7 @@
   <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
-  <div class="img-container">
+  <div class="left-container">
     <div class="img-content">
       <img 
         class="icon"
@@ -26,41 +26,48 @@
     </div>
   </div>
 
-  <div class="content-container">
+  <div class="right-container">
     <h3>
       This is not a real online service! Sign up here to join the Cali 
       Rollout sessions happening every Saturday at 3PM.
     </h3>
 
     <form class="form-container">
-      <h3>Get your skate on!</h3>
-
-      <div class="form-input-container">
+      <div class="form-inputs">
+        <h3>Get your skate on!</h3>
         <div class="form-row">
-          <label for="first-name">FIRST NAME</label>
-          <input id="first-name" name="first-name" type="text">
-
-          <label for="first-name">LAST NAME</label>
-          <input id="last-name" name="last-name" type="text">
+          <div class="single-input">
+            <label for="first-name">FIRST NAME</label>
+            <input id="first-name" name="first-name" type="text">
+          </div>
+          <div class="single-input">
+            <label for="first-name">LAST NAME</label>
+            <input id="last-name" name="last-name" type="text">
+          </div>
         </div>
         <div class="form-row">
-          <label for="email">EMAIL</label>
-          <input id="email" name="email" type="email">
-
-          <label for="phone">PHONE NUMBER</label>
-          <input id="phone" name="phone" type="tel">
+          <div class="single-input">
+            <label for="email">EMAIL</label>
+            <input id="email" name="email" type="email">
+          </div>
+          <div class="single-input">
+            <label for="phone">PHONE NUMBER</label>
+            <input id="phone" name="phone" type="tel">
+          </div>
         </div>
         <div class="form-row">
-          <label for="password">PASSWORD</label>
-          <input id="password" name="password" type="password">
-
-          <label for="password-confirm">CONFIRM PASSWORD</label>
-          <input id="password-confirm" name="password-confirm" type="password">
+          <div class="single-input">
+            <label for="password">PASSWORD</label>
+            <input id="password" name="password" type="password">
+          </div>
+          <div class="single-input">
+            <label for="password-confirm">CONFIRM PASSWORD</label>
+            <input id="password-confirm" name="password-confirm" type="password">
+          </div>
         </div>
       </div>
 
       <button type="submit">Register</button>
-
       <p>Already have an account? <a>Log in</a></p>
     </form>
   </div>
