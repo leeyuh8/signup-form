@@ -19,18 +19,13 @@ function validatePasswords() {
 
 function toggleStyleClass(validationResult) {
   passInputs.forEach((input) => {
-    input.classList.remove('valid-input');
     input.classList.remove('invalid-input');
-  })
+  });
 
-  if (validationResult) {
-    passInputs.forEach((input) => {
-      input.classList.add('valid-input');
-    })
-  } else {
+  if (validationResult === false) {
     passInputs.forEach((input) => {
       input.classList.add('invalid-input');
-    })
+    });
   };
 }
 
