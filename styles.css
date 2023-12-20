@@ -10,13 +10,13 @@
   src: url("./assets/fonts/LuckiestGuy-Regular.ttf");
 }
 :root {
-  --rose: rgba(170, 160, 159, 1);
+  --rose: 170, 160, 159;
   --licorice: 35, 26, 21;
-  --teal: rgba(105, 177, 166, 1);
-  --pale-orange: rgba(225, 164, 97, 1);
-  --chestnut: rgba(151, 74, 67, 1);
+  --teal: 105, 177, 166;
+  --pale-orange: 231, 172, 104;
+  --chestnut: 151, 74, 67;
   --maroon: 58, 15, 6;
-  --dark-teal: rgba(44, 96, 94, 1);
+  --dark-teal: 44, 96, 94;
 }
 
 body {
@@ -89,7 +89,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 60vw;
-  background-color:var(--teal);
+  background-color:rgba(var(--teal), 1);
   gap: 50px;
   position: relative;
   box-shadow: -10px 0 20px rgba(var(--licorice), 0.3);
@@ -126,14 +126,14 @@ footer {
     font-size: 14px;
 
     a {
-      color: var(--dark-teal);
+      color: rgba(var(--dark-teal), 1);
       font-weight: bold;
     }
   }
 }
 
 .form-inputs {
-  background-color: var(--pale-orange);
+  background-color: rgba(var(--pale-orange), 1);
   display: flex;
   flex-direction: column;
   padding: 30px;
@@ -141,7 +141,12 @@ footer {
   gap: 20px;
 
   h3 {
+    font-size: xx-large;
     color: rgba(var(--licorice), 1);
+    p {
+      padding-top: 5px;
+      color: rgba(var(--maroon), 0.5);
+    }
   }
 }
 
@@ -156,13 +161,18 @@ footer {
   gap: 2px;
 
   label {
-    color: rgba(var(--licorice), 1);
+    color: rgba(var(--maroon), 0.5);
     font-weight: bold;
     font-size: 10px;
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
+    display: flex;
+    p{
+      color: red;
+      font-size: inherit;
+    } 
   } 
   input {
-    border: 2px solid var(--rose);
+    border: 2px solid rgba(var(--rose), 1);
     width: 200px;
     border-radius: 5px;
     height: 2em;
@@ -171,7 +181,7 @@ footer {
   }
   input:focus {
     outline: none;
-    border: 2px solid var(--dark-teal);
+    border: 2px solid rgba(var(--dark-teal), 1);
     box-shadow: 2px 2px 5px rgba(var(--maroon), 0.5);
   }
   .invalid-input {
