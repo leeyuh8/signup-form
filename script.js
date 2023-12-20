@@ -21,14 +21,15 @@ function validatePasswords() {
 function toggleStyleClass(validationResult) {
   passInputs.forEach((input) => {
     input.classList.remove('invalid-input');
-    para.textContent  = "";
   });
+  para.textContent  = "";
+  passConfirmInput.removeEventListener('input', stylePassInputs);
 
   if (validationResult === false) {
     passInputs.forEach((input) => {
       input.classList.add('invalid-input');
     });
     para.textContent = "* Passwords do not match";
+    passConfirmInput.addEventListener('input', stylePassInputs);
   };
 }
-
