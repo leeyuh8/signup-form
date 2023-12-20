@@ -188,6 +188,7 @@ footer {
     border: 2px solid darkred;
     background-color: rgb(255, 201, 212);
   }
+  .email-warning, 
   .pass-warning {
     color: darkred;
     font-size: 12px;
