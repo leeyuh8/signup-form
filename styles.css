@@ -16,7 +16,7 @@
   --pale-orange: rgba(225, 164, 97, 1);
   --chestnut: rgba(151, 74, 67, 1);
   --maroon: 58, 15, 6;
-  --dark-teal: rgba(44, 96, 94, 1)
+  --dark-teal: rgba(44, 96, 94, 1);
 }
 
 body {
@@ -171,8 +171,8 @@ footer {
   }
   input:focus {
     outline: none;
-    border: 2px solid var(--dark-teal) ;
-    box-shadow: 2px 2px 5px rgba(var(--maroon), 0.2);
+    border: 2px solid var(--dark-teal);
+    box-shadow: 2px 2px 5px rgba(var(--maroon), 0.5);
   }
   .invalid-input {
     border: 2px solid darkred;
