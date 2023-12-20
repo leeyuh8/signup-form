@@ -159,6 +159,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  width: 200px;
 
   label {
     color: rgba(var(--maroon), 0.5);
@@ -173,7 +174,6 @@ footer {
   } 
   input {
     border: 2px solid rgba(var(--rose), 1);
-    width: 200px;
     border-radius: 5px;
     height: 2em;
     background-color: whitesmoke;
