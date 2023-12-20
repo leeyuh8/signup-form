@@ -4,6 +4,7 @@ registerBtn.addEventListener('click', stylePassInputs);
 const passOriginalInput = document.querySelector("#password");
 const passConfirmInput = document.querySelector("#password-confirm");
 const passInputs = [passOriginalInput, passConfirmInput];
+const para = document.querySelector(".pass-warning");
 
 function stylePassInputs() {
   let validationResult = validatePasswords();
@@ -20,12 +21,14 @@ function validatePasswords() {
 function toggleStyleClass(validationResult) {
   passInputs.forEach((input) => {
     input.classList.remove('invalid-input');
+    para.textContent  = "";
   });
 
   if (validationResult === false) {
     passInputs.forEach((input) => {
       input.classList.add('invalid-input');
     });
+    para.textContent = "* Passwords do not match";
   };
 }
 
