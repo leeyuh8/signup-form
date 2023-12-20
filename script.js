@@ -1,28 +1,4 @@
 // SET DEFAULT ACTIONS
-const emailInput = document.querySelector("#email");
-const emailWarningPara = document.querySelector(".email-warning");
-emailInput.addEventListener('input', () => {
-  let result = checkEmail();
-  if (result === false) {
-    displayInvalidEmailStyles();
-  } else if (result === true) {
-    removeInvalidEmailStyles();
-  }
-});
-
-const passOriginalInput = document.querySelector("#password");
-const passConfirmInput = document.querySelector("#password-confirm");
-const passInputs = [passOriginalInput, passConfirmInput];
-const passWarningPara = document.querySelector(".pass-warning");
-passConfirmInput.addEventListener('input', () => {
-  let result = checkPasswords();
-  if (result === false) {
-    displayInvalidPassStyles();
-  } else if (result === true) {
-    removeInvalidPassStyles();
-  }
-});
-
 const form = document.querySelector("form");
 const registerBtn = document.querySelector("button");
 registerBtn.addEventListener('click', validateInputs);
@@ -31,23 +7,34 @@ function validateInputs() {
   let checkPassResult = checkPasswords();
   if (checkEmailResult && checkPassResult) {
     form.submit();
-  } else if (checkEmailResult === false || checkPassResult === false) {
-    window.alert("All required fields must be filled in correctly.");
+  };
+  if (checkEmailResult === false) {
+    displayInvalidEmailStyles();
+    addEmailInputListener();
+  };
+  if (checkPassResult === false) {
+    displayInvalidPassStyles();
+    addPassInputListener();
   };
 }
 
 
-// REFERENCE FUNCTIONS
+// REFERENCE CONST'S and FUNCTIONS
+const emailInput = document.querySelector("#email");
+const emailWarningPara = document.querySelector(".email-warning");
+const passOriginalInput = document.querySelector("#password");
+const passConfirmInput = document.querySelector("#password-confirm");
+const passInputs = [passOriginalInput, passConfirmInput];
+const passWarningPara = document.querySelector(".pass-warning");
+
 function checkEmail() {
   const emailValue = emailInput.value;
   const emailRegex = /^.+@.+\..+$/;
-
   return emailRegex.test(emailValue);
 }
 function checkPasswords() {
   const passOriginalValue = passOriginalInput.value;
   const passConfirmValue = passConfirmInput.value;
-
   return passOriginalValue === passConfirmValue ? true : false;
 }
 
@@ -71,4 +58,25 @@ function removeInvalidPassStyles() {
     input.classList.remove('invalid-input');
   });
   passWarningPara.textContent = "";
+}
+
+function addEmailInputListener() {
+  emailInput.addEventListener('input', () => {
+    let result = checkEmail();
+    if (result === false) {
+      displayInvalidEmailStyles();
+    } else if (result === true) {
+      removeInvalidEmailStyles();
+    }
+  });
+}
+function addPassInputListener() {
+  passConfirmInput.addEventListener('input', () => {
+    let result = checkPasswords();
+    if (result === false) {
+      displayInvalidPassStyles();
+    } else if (result === true) {
+      removeInvalidPassStyles();
+    }
+  });
 }
