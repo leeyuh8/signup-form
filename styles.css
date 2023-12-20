@@ -192,4 +192,7 @@ footer {
     color: darkred;
     font-size: 12px;
   }
+  ::placeholder {
+    color: rgba(var(--rose), 1);
+  }
   }
