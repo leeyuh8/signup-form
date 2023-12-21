@@ -123,6 +123,13 @@ footer {
     box-shadow: 3px 3px 10px rgba(var(--licorice), 1);
     margin-top: 15px;
   }
+  button:hover {
+    background-color: rgba(var(--chestnut),1);
+  }
+  button:active {
+    background-color: rgba(var(--chestnut),1);
+    box-shadow: none;
+  }
   > :nth-last-child(-n+2) {
     margin-left: 30px;
   }
